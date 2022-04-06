@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mapFragment2">
+    <fragment
+        android:id="@+id/fragmentCustomization"
+        android:name="com.example.mvvmalarm.UI.FragmentCustomization"
+        android:label="Point customization"
+        tools:layout="@layout/fragment_customization">
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment2"
+        android:name="com.example.mvvmalarm.UI.MapFragment"
+        android:label="Share Me"
+        tools:layout="@layout/fragment_map">
+        <action
+            android:id="@+id/action_mapFragment2_to_fragmentCustomization"
+            app:destination="@id/fragmentCustomization" />
+    </fragment>
+    <fragment
+        android:id="@+id/points_list_dest"
+        android:name="com.example.mvvmalarm.UI.PointsListFragment"
+        android:label="Points List"
+        tools:layout="@layout/fragment_points_list" />
+</navigation>
